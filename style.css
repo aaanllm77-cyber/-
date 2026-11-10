@@ -52,3 +52,6 @@ footer{text-align:center;padding:30px;border-top:1px solid var(--line);color:var
 .big{font-size:24px;color:var(--gold);margin:10px 0}
 form{display:grid;grid-template-columns:1fr 1fr;gap:12px}form label{display:grid;gap:4px;font-size:12px;color:var(--mu)}form .full{grid-column:1/-1}form textarea{min-height:80px}
 @media(max-width:700px){.hero,.detail,form{grid-template-columns:1fr}.hero-img{display:none}}
+.card img{height:250px;border-bottom:1px solid var(--line);margin-bottom:2px}
+.card:hover{box-shadow:0 10px 30px #e8cf9a22}
+.tag{background:linear-gradient(90deg,#2a1a7a,#5a2a8a);letter-spacing:1px}
