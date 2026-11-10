@@ -55,3 +55,35 @@ form{display:grid;grid-template-columns:1fr 1fr;gap:12px}form label{display:grid
 .card img{height:250px;border-bottom:1px solid var(--line);margin-bottom:2px}
 .card:hover{box-shadow:0 10px 30px #e8cf9a22}
 .tag{background:linear-gradient(90deg,#2a1a7a,#5a2a8a);letter-spacing:1px}
+
+.cartbtn{background:none;border:1px solid var(--gold);color:var(--gold);padding:8px 16px;cursor:pointer;font:inherit;font-size:12px;letter-spacing:1px}
+.cartbtn b{background:var(--gold);color:#111;border-radius:10px;padding:0 8px;margin-left:4px}
+.buy{flex-basis:100%;background:var(--gold)!important;color:#111!important;border-color:var(--gold)!important;font-weight:500;padding:8px!important;letter-spacing:1px}
+.acts{flex-wrap:wrap}
+.card img{background:#fff;object-fit:contain;padding:8px}
+.overlay{position:fixed;inset:0;background:#000a;opacity:0;pointer-events:none;transition:.25s;z-index:60}
+.overlay.on,.drawer.on~.overlay{opacity:1}
+.drawer{position:fixed;top:0;right:0;height:100%;width:min(440px,100%);background:#141414;border-left:1px solid var(--gold);z-index:70;display:flex;flex-direction:column;transform:translateX(100%);transition:.3s}
+.drawer.on{transform:none}
+.drawer.on+.overlay{opacity:1;pointer-events:auto}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;border-bottom:1px solid var(--line)}
+.dh h3,.mt{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:30px}.mt{margin-bottom:16px}
+.dh .x{position:static}
+.citems{flex:1;overflow:auto;padding:8px 20px}
+.crow{display:grid;grid-template-columns:70px 1fr auto;gap:12px;padding:14px 0;border-bottom:1px solid var(--line);align-items:start;font-size:13px}
+.crow img{width:70px;height:80px;object-fit:contain;background:#fff;padding:3px}
+.cl{color:var(--gold);white-space:nowrap}
+.qty{display:flex;gap:6px;align-items:center;margin-top:6px}
+.qty button{background:none;border:1px solid var(--line);color:var(--tx);width:26px;height:26px;cursor:pointer}
+.qty .rm{width:auto;padding:0 8px;margin-left:8px;color:#e88;font-size:11px}
+.df{padding:18px 24px;border-top:1px solid var(--line)}
+.srow{display:flex;justify-content:space-between;gap:12px;padding:5px 0;font-size:13px}
+.srow.tot{font-size:18px;color:var(--gold);border-top:1px solid var(--line);margin-top:6px;padding-top:10px}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+.ck{display:grid;grid-template-columns:1.3fr 1fr;gap:26px}.ck form{display:grid;gap:12px}.ck label{display:grid;gap:4px;font-size:12px;color:var(--mu)}
+.sumbox{background:var(--card);border:1px solid var(--line);padding:18px;align-self:start}.sumbox h4{font-weight:400;letter-spacing:1px;margin-bottom:10px}
+.err{color:#e88;font-size:13px;min-height:18px}
+.ok{text-align:center;display:grid;gap:10px;justify-items:center;padding:20px 0}
+.check{width:70px;height:70px;border:2px solid var(--gold);border-radius:50%;color:var(--gold);font-size:36px;display:grid;place-items:center}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--gold);color:#111;padding:12px 24px;z-index:100;font-size:13px}
+@media(max-width:700px){.ck{grid-template-columns:1fr}.top span:first-child{display:none}}

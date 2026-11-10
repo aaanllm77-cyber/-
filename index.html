@@ -9,8 +9,8 @@
 </head>
 <body>
 <header>
-  <div class="top"><span>Про нас · Контакти · Відгуки</span><a class="logo" href="#home">Ṧelect</a><span class="top-r">♡ 🛍</span></div>
-  <nav><a href="#home">ГОЛОВНА</a><a href="#catalog">КАТАЛОГ</a><a href="#extremes">ЦІНИ</a><a href="#about">ПРО НАС</a><a href="#contacts">КОНТАКТИ</a></nav>
+  <div class="top"><span>Про нас · Контакти · Відгуки</span><a class="logo" href="#home">Ṧelect</a><button id="cartBtn" class="cartbtn" aria-label="Кошик">🛍 Кошик <b id="cartCount">0</b></button></div>
+  <nav><a href="#home">ГОЛОВНА</a><a href="#catalog">КАТАЛОГ</a><a href="#about">ПРО НАС</a><a href="#contacts">КОНТАКТИ</a></nav>
 </header>
 
 <section id="home" class="hero">
@@ -38,11 +38,6 @@
   <div id="grid" class="grid"></div>
 </section>
 
-<section id="extremes" class="wrap">
-  <h2>НАЙДОРОЖЧИЙ ТА НАЙДЕШЕВШИЙ</h2>
-  <div id="ext" class="ext"></div>
-</section>
-
 <section id="about" class="wrap about">
   <div><h2>ЧОМУ SELECT</h2>
   <ul><li><b>Ексклюзив без затримок</b> — передові бренди та новинки.</li>
@@ -62,6 +57,12 @@
 </section>
 <footer>© 2026 Select. Усі права захищено.</footer>
 
+<aside id="drawer" class="drawer"><div class="dh"><h3>Кошик</h3><button class="x" id="drawerClose">×</button></div>
+<div id="cartItems" class="citems"></div>
+<div class="df"><div class="srow tot"><span>Разом</span><span id="cartTotal">0 грн</span></div>
+<button id="checkoutBtn" class="btn" style="width:100%">Оформити замовлення</button>
+<button id="clearCart" class="btn ghost" style="width:100%;margin-top:8px">Очистити кошик</button></div></aside>
+<div id="overlay" class="overlay"></div>
 <div id="modal" class="modal"><div class="box"><button class="x" id="close">×</button><div id="mbody"></div></div></div>
 <script src="script.js"></script>
 </body>
