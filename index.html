@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Select — студія нішевої парфумерії та косметики</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="top"><span>Про нас · Контакти · Відгуки</span><a class="logo" href="#home">Ṧelect</a><span class="top-r">♡ 🛍</span></div>
+  <nav><a href="#home">ГОЛОВНА</a><a href="#catalog">КАТАЛОГ</a><a href="#extremes">ЦІНИ</a><a href="#about">ПРО НАС</a><a href="#contacts">КОНТАКТИ</a></nav>
+</header>
+
+<section id="home" class="hero">
+  <div><h1>Select</h1><p>РОЗКІШ, ЩО ЗАЛИШАЄ СЛІД</p><a class="link" href="#catalog">— ДО КАТАЛОГУ</a></div>
+  <div class="hero-img"></div>
+</section>
+<div class="strip">SELECT — СТУДІЯ ПАРФУМЕРІЇ ТА КОСМЕТИКИ</div>
+
+<section id="catalog" class="wrap">
+  <h2>КАТАЛОГ</h2>
+  <div class="tabs" id="tabs"></div>
+  <div class="filters">
+    <input id="q" type="search" placeholder="Пошук за назвою, брендом, категорією…">
+    <select id="fBrand"></select>
+    <select id="fPurpose"></select>
+    <label>Ціна від <input id="pMin" type="number" min="0" placeholder="0"></label>
+    <label>до <input id="pMax" type="number" min="0" placeholder="∞"></label>
+    <select id="sort"><option value="">Без сортування</option><option value="asc">Ціна ↑</option><option value="desc">Ціна ↓</option><option value="name">За назвою</option></select>
+    <button id="reset" class="btn ghost">Скинути</button>
+    <button id="add" class="btn">+ Додати товар</button>
+  </div>
+  <p id="count" class="muted"></p>
+  <div id="grid" class="grid"></div>
+</section>
+
+<section id="extremes" class="wrap">
+  <h2>НАЙДОРОЖЧИЙ ТА НАЙДЕШЕВШИЙ</h2>
+  <div id="ext" class="ext"></div>
+</section>
+
+<section id="about" class="wrap about">
+  <div><h2>ЧОМУ SELECT</h2>
+  <ul><li><b>Ексклюзив без затримок</b> — передові бренди та новинки.</li>
+  <li><b>100% оригінальні бренди</b> — лише автентична продукція.</li>
+  <li><b>Доставка по всій Україні</b> — кур'єром чи Новою Поштою.</li>
+  <li><b>Безпечна оплата</b> — ваші дані захищені.</li></ul></div>
+</section>
+
+<section id="contacts" class="wrap">
+  <h2>КОНТАКТИ</h2>
+  <div class="cont">
+    <div><h4>НАША АДРЕСА</h4><p>01004, м. Київ, вулиця Велика Васильківська, 43</p></div>
+    <div><h4>EMAIL</h4><p>showroomselect1@gmail.com</p></div>
+    <div><h4>ТЕЛЕФОНИ</h4><p>+38 (073) 833-82-27</p></div>
+    <div><h4>ГРАФІК РОБОТИ</h4><p>11:00–19:00 без перерви та вихідних</p></div>
+  </div>
+</section>
+<footer>© 2026 Select. Усі права захищено.</footer>
+
+<div id="modal" class="modal"><div class="box"><button class="x" id="close">×</button><div id="mbody"></div></div></div>
+<script src="script.js"></script>
+</body>
+</html>
