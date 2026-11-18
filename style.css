@@ -12,7 +12,7 @@ nav a:hover,.link:hover{color:var(--gold)}
 .hero h1{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(56px,9vw,120px);font-weight:400;color:#f5d9c8}
 .hero p{letter-spacing:3px;margin:10px 0 36px}
 .link{color:var(--gold);font-size:13px;letter-spacing:1px}
-.hero-img{height:60vh;border-radius:200px 200px 0 0;background:url(https://loremflickr.com/700/900/perfume,bottle?lock=77) center/cover;border:1px solid var(--gold);opacity:.85}
+.hero-img{height:68vh;min-height:360px;background:url(images/hero.png) center/contain no-repeat;filter:drop-shadow(0 20px 40px #000c) drop-shadow(0 0 60px #e8cf9a22)}
 .strip{text-align:center;padding:26px;font-family:'Cormorant Garamond',serif;font-size:clamp(20px,3vw,38px);color:#5d5a54;letter-spacing:2px}
 .wrap{max-width:1200px;margin:0 auto;padding:60px 5%}
 h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(36px,5vw,60px);color:#6b6862;margin-bottom:28px;letter-spacing:2px}
@@ -51,7 +51,7 @@ footer{text-align:center;padding:30px;border-top:1px solid var(--line);color:var
 .detail table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13px}.detail td{padding:6px 0;border-bottom:1px solid var(--line)}.detail td:first-child{color:var(--mu)}
 .big{font-size:24px;color:var(--gold);margin:10px 0}
 form{display:grid;grid-template-columns:1fr 1fr;gap:12px}form label{display:grid;gap:4px;font-size:12px;color:var(--mu)}form .full{grid-column:1/-1}form textarea{min-height:80px}
-@media(max-width:700px){.hero,.detail,form{grid-template-columns:1fr}.hero-img{display:none}}
+@media(max-width:700px){.hero,.detail,form{grid-template-columns:1fr}.hero-img{height:42vh;min-height:260px}}
 .card img{height:250px;border-bottom:1px solid var(--line);margin-bottom:2px}
 .card:hover{box-shadow:0 10px 30px #e8cf9a22}
 .tag{background:linear-gradient(90deg,#2a1a7a,#5a2a8a);letter-spacing:1px}
