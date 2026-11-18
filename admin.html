@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Select — адмін-панель</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body class="adminpage">
+
+<!-- Вхід за паролем -->
+<main id="login" class="loginbox">
+  <a class="logo" href="index.html">Ṧelect</a>
+  <h1>Адмін-панель</h1>
+  <form id="loginForm">
+    <label>Пароль<input id="pw" type="password" autocomplete="current-password" autofocus required></label>
+    <p id="loginErr" class="err"></p>
+    <button class="btn" type="submit">Увійти</button>
+  </form>
+  <a class="back" href="index.html">← На сайт</a>
+</main>
+
+<!-- Панель (показується після входу) -->
+<div id="app" hidden>
+  <header class="ahead">
+    <a class="logo" href="index.html">Ṧelect</a>
+    <span class="atitle">Керування товарами</span>
+    <div class="aright">
+      <a class="btn ghost" href="index.html?preview" target="_blank" rel="noopener">Переглянути на сайті</a>
+      <button id="logout" class="btn ghost">Вийти</button>
+    </div>
+  </header>
+
+  <section class="wrap awrap">
+    <div id="notice" class="notice"></div>
+
+    <div class="toolbar">
+      <input id="aq" type="search" placeholder="Пошук за назвою або брендом…">
+      <select id="acat"></select>
+      <button id="addBtn" class="btn">+ Додати товар</button>
+    </div>
+    <p id="acount" class="muted"></p>
+
+    <div class="tablewrap">
+      <table class="atable">
+        <thead><tr><th></th><th>Назва / бренд</th><th>Категорія</th><th>Ціна</th><th>Мітка</th><th></th></tr></thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+
+    <h2 class="h2s">Публікація змін</h2>
+    <div class="pub">
+      <p>Зміни зберігаються лише у <b>вашому браузері</b> (чернетка). Щоб вони з'явились на сайті:</p>
+      <ol>
+        <li>Натисніть «Завантажити products.js».</li>
+        <li>У репозиторії GitHub замініть файл <code>products.js</code> завантаженим (Add file → Upload files, або перетягніть у папку репозиторію).</li>
+        <li>Зробіть commit — за хвилину GitHub Pages оновить сайт.</li>
+      </ol>
+      <p>Нові фото покладіть у папку <code>images/</code> репозиторію й вкажіть шлях у товарі, наприклад <code>images/care/krem.webp</code>.</p>
+      <div class="pubbtns">
+        <button id="dl" class="btn">⬇ Завантажити products.js</button>
+        <label class="btn ghost filebtn">Імпортувати products.js<input id="imp" type="file" accept=".js,.json" hidden></label>
+        <button id="discard" class="btn ghost">Скасувати чернетку</button>
+        <button id="chpw" class="btn ghost">Змінити пароль</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div id="modal" class="modal"><div class="box"><button class="x" id="close">×</button><div id="mbody"></div></div></div>
+
+<script src="products.js"></script>
+<script src="config.js"></script>
+<script src="common.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>
